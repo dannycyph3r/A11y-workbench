@@ -1,0 +1,23 @@
+{
+  "description": "Defects deliberately placed in fixtures/known-bad.html and the rule each must trigger.",
+  "defects": [
+    { "rule": "html-has-lang", "what": "<html> has no lang attribute" },
+    { "rule": "document-title", "what": "No <title> element" },
+    { "rule": "meta-viewport", "what": "Viewport blocks zoom (maximum-scale=1, user-scalable=no)" },
+    { "rule": "image-alt", "what": "Waiting room photo has no alt" },
+    { "rule": "color-contrast", "what": ".muted paragraph #9a9a9a on white", "count": 2 },
+    { "rule": "label", "what": "Health card input labelled only by a nearby span" },
+    { "rule": "autocomplete-valid", "what": "autocomplete=\"emial\"" },
+    { "rule": "button-name", "what": "Icon-only search button" },
+    { "rule": "link-name", "what": "Icon-only account link" },
+    { "rule": "aria-valid-attr", "what": "Misspelled aria-labeledby" },
+    { "rule": "heading-order", "what": "h1 followed by h3" },
+    { "rule": "tabindex", "what": "Sign in button has tabindex=3" },
+    { "rule": "target-size", "what": "Adjacent 18px text size buttons", "count": 2 },
+    { "rule": "awb-role-button-div", "what": "div role=button with no tabindex" },
+    { "rule": "awb-outline-suppressed", "what": "a:focus, button:focus { outline: none }" },
+    { "rule": "awb-focus-not-visible", "what": "Links and buttons show no focus indicator" },
+    { "rule": "awb-paste-blocked", "what": "Password field cancels paste" },
+    { "rule": "awb-dragging-alternative", "what": "Draggable preference list", "count": 2 }
+  ]
+}

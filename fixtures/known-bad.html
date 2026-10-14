@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+  A11y Workbench test fixture: a fictional clinic booking page with
+  controlled accessibility defects. Every defect is listed in
+  fixtures/known-bad.defects.json and asserted by the test suite.
+  Maple Ridge Community Clinic is invented; no real organisation is depicted.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+    body { font-family: Georgia, serif; margin: 0; color: #1f2933; background: #ffffff; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: #f4f6f8; }
+    .brand { font-weight: 700; font-size: 20px; }
+    main { max-width: 720px; margin: 0 auto; padding: 24px; }
+    .muted { color: #9a9a9a; }
+    .card { border: 1px solid #d9dee3; border-radius: 8px; padding: 16px; margin: 16px 0; }
+    .cta { display: inline-block; background: #0b5cad; color: #ffffff; padding: 10px 16px; border-radius: 6px; cursor: pointer; }
+    a:focus, button:focus { outline: none; }
+    .close { width: 16px; height: 16px; padding: 0; font-size: 10px; line-height: 16px; border: 0; background: #e4e7eb; }
+    .prefs li { padding: 6px; border: 1px dashed #b8c2cc; margin: 4px 0; list-style: none; }
+    label { display: block; margin-top: 12px; }
+    .size { width: 18px; height: 18px; padding: 0; margin: 0; font-size: 9px; border: 1px solid #52606d; background: #ffffff; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">Maple Ridge Community Clinic</span>
+    <nav aria-label="Main">
+      <a href="/services">Services</a>
+      <a href="/locations">Locations</a>
+      <a href="/account"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="7" r="4" fill="#1f2933"/><path d="M2 19c1-5 15-5 16 0" fill="#1f2933"/></svg></a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Book an appointment</h1>
+    <img src="/images/waiting-room.jpg" width="640" height="280">
+    <p class="muted">Walk-in hours are limited this week. Book online to reserve a time.</p>
+
+    <h3>Find a time</h3>
+    <div class="card">
+      <span style="color: #7fb3d5; font-size: 14px;">Same-day slots available</span>
+      <span>Health card number</span>
+      <input type="text" autocomplete="emial">
+      <label for="visit-date">Preferred date</label>
+      <input id="visit-date" type="date">
+      <button type="button" class="icon-search"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke="#1f2933" fill="none"/></svg></button>
+      <div role="button" class="cta">Book now</div>
+    </div>
+
+    <h2>Your preferences</h2>
+    <p id="prefs-help" aria-labeledby="prefs-title">Drag to reorder the clinicians you prefer to see.</p>
+    <ul class="prefs">
+      <li draggable="true">Dr. Okafor</li>
+      <li draggable="true">Dr. Lindqvist</li>
+    </ul>
+
+    <h2>Patient portal sign-in</h2>
+    <form action="/signin" method="post">
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="email">
+      <label for="password">Password</label>
+      <input id="password" type="password" onpaste="return false" autocomplete="current-password">
+      <button type="submit" tabindex="3">Sign in</button>
+    </form>
+
+    <div class="text-size" role="group" aria-label="Text size">
+      <button type="button" class="size">A-</button><button type="button" class="size">A+</button>
+    </div>
+
+    <div class="card" role="dialog" aria-label="Clinic notice">
+      <button type="button" class="close" aria-label="Dismiss notice">x</button>
+      <p>Flu shots are available at all locations from October 1.</p>
+    </div>
+  </main>
+</body>
+</html>
