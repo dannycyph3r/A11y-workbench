@@ -8,3 +8,6 @@ next-env.d.ts
 test-results/
 playwright-report/
 *.zip
+
+# Written by next dev on every start
+AGENTS.md
