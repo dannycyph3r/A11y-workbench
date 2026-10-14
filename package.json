@@ -1,0 +1,49 @@
+{
+  "name": "a11y-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "playwright test",
+    "test:all": "npm run typecheck && npm run lint && npm test && npm run test:integration && npm run test:e2e",
+    "browsers:install": "playwright install chromium",
+    "demo:generate": "tsx --conditions=react-server scripts/generate-demo.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/atkinson-hyperlegible-mono": "^5.3.0",
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
+    "axe-core": "^4.14.0",
+    "diff": "^9.0.0",
+    "lucide-react": "^1.56.0",
+    "next": "^16.4.0",
+    "playwright": "^1.64.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "server-only": "^0.0.1",
+    "typescript": "^6.0.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.0",
+    "postcss": "^8.5.30",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "vitest": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}
