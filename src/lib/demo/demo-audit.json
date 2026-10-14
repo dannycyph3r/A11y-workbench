@@ -1,0 +1,1240 @@
+{
+ "id": "demo-maple-ridge",
+ "createdAt": "2026-10-13T12:00:00.000Z",
+ "isDemo": true,
+ "status": "complete",
+ "input": {
+  "kind": "fixture",
+  "fileName": "maple-ridge-booking.html"
+ },
+ "profile": "wcag22aa",
+ "includeBestPractice": true,
+ "engine": {
+  "name": "axe-core",
+  "version": "4.14.0",
+  "browser": "141.0.7390.37",
+  "workbench": "0.1.0"
+ },
+ "scope": {
+  "pageState": "Initial render of the submitted markup with page scripts blocked; no interaction beyond a Tab walk.",
+  "viewport": {
+   "width": 1280,
+   "height": 800
+  },
+  "rulesRun": 92,
+  "notes": [
+   "Demo data: recorded from a real scan of a bundled sample page for a fictional clinic. It is not a scan of any live site.",
+   "The Tab walk reached 12 focusable elements."
+  ]
+ },
+ "criteriaExercised": [
+  "1.1.1",
+  "1.3.1",
+  "1.3.5",
+  "1.4.12",
+  "1.4.3",
+  "1.4.4",
+  "2.4.1",
+  "2.4.2",
+  "2.4.4",
+  "2.5.3",
+  "2.5.8",
+  "3.1.1",
+  "3.3.2",
+  "4.1.2"
+ ],
+ "counts": {
+  "passes": 39,
+  "violations": 13,
+  "incomplete": 1,
+  "inapplicable": 47
+ },
+ "findings": [
+  {
+   "id": "1pxcqg2",
+   "ruleId": "aria-valid-attr",
+   "source": "axe",
+   "category": "aria",
+   "kind": "violation",
+   "title": "ARIA attribute name is not valid",
+   "description": "Browsers ignore misspelled ARIA attributes, so the intended state or property never reaches assistive technology.",
+   "impact": "critical",
+   "criteria": [
+    {
+     "id": "4.1.2",
+     "title": "Name, Role, Value",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr?application=axeAPI",
+   "node": {
+    "selector": "#prefs-help",
+    "html": "<p id=\"prefs-help\" aria-labeledby=\"prefs-title\">Drag to reorder the clinicians you prefer to see.</p>",
+    "failureSummary": "Fix any of the following:\n  Invalid ARIA attribute name: aria-labeledby",
+    "location": {
+     "start": 2694,
+     "end": 2742,
+     "line": 54,
+     "column": 5
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Invalid ARIA attribute name: aria-labeledby"
+    ]
+   },
+   "recommendation": "Correct the attribute name, or remove it if a native HTML attribute already covers it.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0umd813",
+   "ruleId": "button-name",
+   "source": "axe",
+   "category": "aria",
+   "kind": "violation",
+   "title": "Button has no accessible name",
+   "description": "Screen reader users hear only \"button\" and cannot tell what it does. Voice control users cannot say its name to press it.",
+   "impact": "critical",
+   "criteria": [
+    {
+     "id": "4.1.2",
+     "title": "Name, Role, Value",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/button-name?application=axeAPI",
+   "node": {
+    "selector": ".icon-search",
+    "html": "<button type=\"button\" class=\"icon-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"5\" stroke=\"#1f2933\" fill=\"none\"></circle></svg></button>",
+    "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "location": {
+     "start": 2413,
+     "end": 2455,
+     "line": 49,
+     "column": 7
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Element does not have inner text that is visible to screen readers",
+     "aria-label attribute does not exist or is empty",
+     "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+     "Element has no title attribute",
+     "Element does not have an implicit (wrapped) <label>",
+     "Element does not have an explicit <label>",
+     "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+    ]
+   },
+   "recommendation": "Give the button visible text. For an icon-only button, add an accessible name that describes the action.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": [
+    "The name must describe the action, which only the author knows."
+   ]
+  },
+  {
+   "id": "04dcb41",
+   "ruleId": "image-alt",
+   "source": "axe",
+   "category": "images",
+   "kind": "violation",
+   "title": "Image has no text alternative",
+   "description": "Screen readers announce an image without alt text by its file name, or skip it, so anyone who cannot see it loses the information it carries.",
+   "impact": "critical",
+   "criteria": [
+    {
+     "id": "1.1.1",
+     "title": "Non-text Content",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/image-alt?application=axeAPI",
+   "node": {
+    "selector": "img",
+    "html": "<img src=\"/images/waiting-room.jpg\" width=\"640\" height=\"280\">",
+    "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "location": {
+     "start": 1938,
+     "end": 1999,
+     "line": 39,
+     "column": 5
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Element does not have an alt attribute",
+     "aria-label attribute does not exist or is empty",
+     "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+     "Element has no title attribute",
+     "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+    ]
+   },
+   "recommendation": "Add alt text that says what the image communicates in this context. If the image is purely decorative, use an empty alt attribute so it is skipped.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": [
+    "Only a person who knows why the image is there can write its alt text."
+   ]
+  },
+  {
+   "id": "1vi6ihf",
+   "ruleId": "label",
+   "source": "axe",
+   "category": "forms",
+   "kind": "violation",
+   "title": "Form field has no label",
+   "description": "Without a programmatic label, screen readers cannot say what to enter, and clicking the label text does not focus the field.",
+   "impact": "critical",
+   "criteria": [
+    {
+     "id": "4.1.2",
+     "title": "Name, Role, Value",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label?application=axeAPI",
+   "node": {
+    "selector": "input",
+    "html": "<input type=\"text\" autocomplete=\"emial\">",
+    "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "location": {
+     "start": 2271,
+     "end": 2311,
+     "line": 46,
+     "column": 7
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Element does not have an implicit (wrapped) <label>",
+     "Element does not have an explicit <label>",
+     "aria-label attribute does not exist or is empty",
+     "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+     "Element has no title attribute",
+     "Element has no placeholder attribute",
+     "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+    ]
+   },
+   "recommendation": "Add a visible <label> associated with the field through for and id. Placeholder text is not a label.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "1jya1sy",
+   "ruleId": "autocomplete-valid",
+   "source": "axe",
+   "category": "forms",
+   "kind": "violation",
+   "title": "Autocomplete value is not valid",
+   "description": "Browsers and assistive tools cannot fill in or identify a field with an unrecognised autocomplete token.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "1.3.5",
+     "title": "Identify Input Purpose",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/autocomplete-valid?application=axeAPI",
+   "node": {
+    "selector": "input",
+    "html": "<input type=\"text\" autocomplete=\"emial\">",
+    "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted",
+    "location": {
+     "start": 2271,
+     "end": 2311,
+     "line": 46,
+     "column": 7
+    },
+    "evidence": [
+     "Fix all of the following:",
+     "the autocomplete attribute is incorrectly formatted"
+    ]
+   },
+   "recommendation": "Use a token from the HTML autofill list, such as email, given-name or street-address.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "1k0wg5x",
+   "ruleId": "color-contrast",
+   "source": "axe",
+   "category": "contrast",
+   "kind": "violation",
+   "title": "Text contrast is below the minimum",
+   "description": "People with low vision or colour deficiencies, and anyone reading in bright light, may not be able to read this text against its background.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "1.4.3",
+     "title": "Contrast (Minimum)",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+   "node": {
+    "selector": ".muted",
+    "html": "<p class=\"muted\">Walk-in hours are limited this week. Book online to reserve a time.</p>",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.81 (foreground color: #9a9a9a, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "location": {
+     "start": 2004,
+     "end": 2021,
+     "line": 40,
+     "column": 5
+    },
+    "contrast": {
+     "foreground": "#9a9a9a",
+     "background": "#ffffff",
+     "ratio": 2.81,
+     "required": 4.5,
+     "fontSizePx": 16,
+     "fontWeight": 400,
+     "isLargeText": false,
+     "colorSource": {
+      "kind": "rule",
+      "selector": ".muted",
+      "value": "rgb(154, 154, 154)"
+     }
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Element has insufficient color contrast of 2.81 (foreground color: #9a9a9a, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ]
+   },
+   "recommendation": "Darken or lighten the text colour (or the background) until the ratio meets the threshold. The workspace proposes the nearest colour that keeps the hue.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Check the new colour in hover, focus, visited and disabled states.",
+    "Confirm the change fits the brand palette before shipping."
+   ]
+  },
+  {
+   "id": "0sqsxtu",
+   "ruleId": "color-contrast",
+   "source": "axe",
+   "category": "contrast",
+   "kind": "violation",
+   "title": "Text contrast is below the minimum",
+   "description": "People with low vision or colour deficiencies, and anyone reading in bright light, may not be able to read this text against its background.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "1.4.3",
+     "title": "Contrast (Minimum)",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+   "node": {
+    "selector": "span",
+    "html": "<span style=\"color: #7fb3d5; font-size: 14px;\">Same-day slots available</span>",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.25 (foreground color: #7fb3d5, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "location": {
+     "start": 2148,
+     "end": 2195,
+     "line": 44,
+     "column": 7
+    },
+    "contrast": {
+     "foreground": "#7fb3d5",
+     "background": "#ffffff",
+     "ratio": 2.25,
+     "required": 4.5,
+     "fontSizePx": 14,
+     "fontWeight": 400,
+     "isLargeText": false,
+     "colorSource": {
+      "kind": "inline",
+      "value": "rgb(127, 179, 213)"
+     }
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Element has insufficient color contrast of 2.25 (foreground color: #7fb3d5, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ]
+   },
+   "recommendation": "Darken or lighten the text colour (or the background) until the ratio meets the threshold. The workspace proposes the nearest colour that keeps the hue.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Check the new colour in hover, focus, visited and disabled states.",
+    "Confirm the change fits the brand palette before shipping."
+   ]
+  },
+  {
+   "id": "0eqjb2j",
+   "ruleId": "document-title",
+   "source": "axe",
+   "category": "structure",
+   "kind": "violation",
+   "title": "Page has no title",
+   "description": "The title is the first thing a screen reader announces and the label on the browser tab. Without it, people cannot tell pages apart.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.2",
+     "title": "Page Titled",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/document-title?application=axeAPI",
+   "node": {
+    "selector": "html",
+    "html": "<html>",
+    "failureSummary": "Fix any of the following:\n  Document does not have a non-empty <title> element",
+    "location": {
+     "start": 299,
+     "end": 305,
+     "line": 8,
+     "column": 1
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Document does not have a non-empty <title> element"
+    ]
+   },
+   "recommendation": "Add a <title> that names the page's topic or purpose.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "01g79cw",
+   "ruleId": "html-has-lang",
+   "source": "axe",
+   "category": "language",
+   "kind": "violation",
+   "title": "Page language is not declared",
+   "description": "Screen readers use the page language to choose pronunciation rules. Without it, content may be read with the wrong voice and accent.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "3.1.1",
+     "title": "Language of Page",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/html-has-lang?application=axeAPI",
+   "node": {
+    "selector": "html",
+    "html": "<html>",
+    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+    "location": {
+     "start": 299,
+     "end": 305,
+     "line": 8,
+     "column": 1
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "The <html> element does not have a lang attribute"
+    ]
+   },
+   "recommendation": "Add a lang attribute to the html element with the content's primary language.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Confirm the language code matches the content."
+   ]
+  },
+  {
+   "id": "0xvkurq",
+   "ruleId": "link-name",
+   "source": "axe",
+   "category": "aria",
+   "kind": "violation",
+   "title": "Link has no accessible name",
+   "description": "Screen reader users hear only \"link\" with no destination.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.4",
+     "title": "Link Purpose (In Context)",
+     "level": "A",
+     "inProfile": true
+    },
+    {
+     "id": "4.1.2",
+     "title": "Name, Role, Value",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-name?application=axeAPI",
+   "node": {
+    "selector": "a",
+    "html": "<a href=\"/account\">",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "location": {
+     "start": 1680,
+     "end": 1699,
+     "line": 33,
+     "column": 7
+    },
+    "evidence": [
+     "Fix all of the following:",
+     "Element is in tab order and does not have accessible text",
+     "Fix any of the following:",
+     "Element does not have text that is visible to screen readers",
+     "aria-label attribute does not exist or is empty",
+     "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+     "Element has no title attribute"
+    ]
+   },
+   "recommendation": "Put descriptive text inside the link, or name an icon-only link by its destination.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0bezgau",
+   "ruleId": "tabindex",
+   "source": "axe",
+   "category": "keyboard",
+   "kind": "violation",
+   "title": "Positive tabindex changes the focus order",
+   "description": "Positive tabindex values pull elements ahead of the natural order, which usually confuses keyboard users.",
+   "impact": "serious",
+   "criteria": [],
+   "isBestPractice": true,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/tabindex?application=axeAPI",
+   "node": {
+    "selector": "button",
+    "html": "<button type=\"submit\" tabindex=\"3\">Sign in</button>",
+    "failureSummary": "Fix any of the following:\n  Element has a tabindex greater than 0",
+    "location": {
+     "start": 3245,
+     "end": 3280,
+     "line": 66,
+     "column": 7
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Element has a tabindex greater than 0"
+    ]
+   },
+   "recommendation": "Use tabindex=\"0\" and arrange the DOM order to match the visual order.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0vwbfmg",
+   "ruleId": "target-size",
+   "source": "axe",
+   "category": "target-size",
+   "kind": "violation",
+   "title": "Touch target is too small",
+   "description": "Small targets with little spacing are hard to hit for people with tremors, limited dexterity or large fingers.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.5.8",
+     "title": "Target Size (Minimum)",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/target-size?application=axeAPI",
+   "node": {
+    "selector": "button",
+    "html": "<button type=\"button\" class=\"size\">A-</button>",
+    "failureSummary": "Fix any of the following:\n  Target has insufficient size (18px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px.",
+    "location": {
+     "start": 3380,
+     "end": 3415,
+     "line": 70,
+     "column": 7
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Target has insufficient size (18px by 18px, should be at least 24px by 24px)",
+     "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px."
+    ]
+   },
+   "recommendation": "Make the target at least 24 by 24 CSS pixels, or keep a 24 pixel circle around it free of other targets.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0s2zbmx",
+   "ruleId": "target-size",
+   "source": "axe",
+   "category": "target-size",
+   "kind": "violation",
+   "title": "Touch target is too small",
+   "description": "Small targets with little spacing are hard to hit for people with tremors, limited dexterity or large fingers.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.5.8",
+     "title": "Target Size (Minimum)",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/target-size?application=axeAPI",
+   "node": {
+    "selector": "button",
+    "html": "<button type=\"button\" class=\"size\">A+</button>",
+    "failureSummary": "Fix any of the following:\n  Target has insufficient size (18px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px.",
+    "location": {
+     "start": 3426,
+     "end": 3461,
+     "line": 70,
+     "column": 53
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Target has insufficient size (18px by 18px, should be at least 24px by 24px)",
+     "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px."
+    ]
+   },
+   "recommendation": "Make the target at least 24 by 24 CSS pixels, or keep a 24 pixel circle around it free of other targets.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "1joj3wr",
+   "ruleId": "heading-order",
+   "source": "axe",
+   "category": "structure",
+   "kind": "violation",
+   "title": "Heading levels skip",
+   "description": "Screen reader users navigate by heading level. A skipped level suggests missing content.",
+   "impact": "moderate",
+   "criteria": [],
+   "isBestPractice": true,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/heading-order?application=axeAPI",
+   "node": {
+    "selector": "h3",
+    "html": "<h3>Find a time</h3>",
+    "failureSummary": "Fix any of the following:\n  Heading order invalid",
+    "location": {
+     "start": 2098,
+     "end": 2102,
+     "line": 42,
+     "column": 5
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Heading order invalid"
+    ]
+   },
+   "recommendation": "Use heading levels that reflect the outline. Change styling with CSS, not by picking a different level.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0tbinao",
+   "ruleId": "meta-viewport",
+   "source": "axe",
+   "category": "structure",
+   "kind": "violation",
+   "title": "Zooming is disabled",
+   "description": "The viewport meta tag blocks pinch zoom, which people with low vision rely on.",
+   "impact": "moderate",
+   "criteria": [
+    {
+     "id": "1.4.4",
+     "title": "Resize Text",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/meta-viewport?application=axeAPI",
+   "node": {
+    "selector": "meta",
+    "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+    "failureSummary": "Fix any of the following:\n  user-scalable=no on <meta> tag disables zooming on mobile devices",
+    "location": {
+     "start": 340,
+     "end": 443,
+     "line": 11,
+     "column": 3
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "user-scalable=no on <meta> tag disables zooming on mobile devices"
+    ]
+   },
+   "recommendation": "Remove user-scalable=no and any maximum-scale below 2 from the viewport meta tag.",
+   "fixConfidence": "high",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "1j9vq7y",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > header > nav > a:nth-of-type(1)",
+    "html": "<a href=\"/services\">",
+    "location": {
+     "start": 1600,
+     "end": 1620,
+     "line": 31,
+     "column": 7
+    },
+    "evidence": [
+     "Reached by Tab press 2.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "1jjs6ey",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > header > nav > a:nth-of-type(2)",
+    "html": "<a href=\"/locations\">",
+    "location": {
+     "start": 1639,
+     "end": 1660,
+     "line": 32,
+     "column": 7
+    },
+    "evidence": [
+     "Reached by Tab press 3.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "1etaniu",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > header > nav > a:nth-of-type(3)",
+    "html": "<a href=\"/account\">",
+    "location": {
+     "start": 1680,
+     "end": 1699,
+     "line": 33,
+     "column": 7
+    },
+    "evidence": [
+     "Reached by Tab press 4.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "14xq2jj",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > div:nth-of-type(1) > button",
+    "html": "<button type=\"button\" class=\"icon-search\">",
+    "location": {
+     "start": 2413,
+     "end": 2455,
+     "line": 49,
+     "column": 7
+    },
+    "evidence": [
+     "Reached by Tab press 7.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "1obw7aj",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > form > button",
+    "html": "<button type=\"submit\" tabindex=\"3\">",
+    "location": {
+     "start": 3245,
+     "end": 3280,
+     "line": 66,
+     "column": 7
+    },
+    "evidence": [
+     "Reached by Tab press 1.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "0e636er",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > div:nth-of-type(2) > button:nth-of-type(1)",
+    "html": "<button type=\"button\" class=\"size\">",
+    "location": {
+     "start": 3380,
+     "end": 3415,
+     "line": 70,
+     "column": 7
+    },
+    "evidence": [
+     "Reached by Tab press 10.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "0ofy7s2",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > div:nth-of-type(2) > button:nth-of-type(2)",
+    "html": "<button type=\"button\" class=\"size\">",
+    "location": {
+     "start": 3426,
+     "end": 3461,
+     "line": 70,
+     "column": 53
+    },
+    "evidence": [
+     "Reached by Tab press 11.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "0irsogv",
+   "ruleId": "awb-focus-not-visible",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "No visible focus indicator",
+   "description": "Keyboard users cannot see which control is focused, so they cannot tell where they are on the page.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > div:nth-of-type(3) > button",
+    "html": "<button type=\"button\" class=\"close\" aria-label=\"Dismiss notice\">",
+    "location": {
+     "start": 3555,
+     "end": 3619,
+     "line": 74,
+     "column": 7
+    },
+    "evidence": [
+     "Reached by Tab press 12.",
+     "When focused, it shows no outline and none of its border, shadow, background, colour or underline styles change."
+    ]
+   },
+   "recommendation": "Add a :focus-visible style with an outline or ring at 3:1 contrast against the surrounding background.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": [
+    "Tab through the page and confirm the indicator is visible on every control."
+   ]
+  },
+  {
+   "id": "1njqpkg",
+   "ruleId": "awb-outline-suppressed",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "heuristic",
+   "title": "Focus outline removed without a replacement",
+   "description": "A stylesheet removes the browser's focus outline and adds no other focus style.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.4.7",
+     "title": "Focus Visible",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "a:focus, button:focus",
+    "html": "a:focus, button:focus { outline: none; }",
+    "evidence": [
+     "The rule removes the outline for \"a:focus, button:focus\" and adds no replacement indicator.",
+     "No focus or focus-visible rule on the page restores one."
+    ]
+   },
+   "recommendation": "Remove the outline reset, or add a visible :focus-visible style alongside it.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0aefo7o",
+   "ruleId": "awb-paste-blocked",
+   "source": "custom",
+   "category": "forms",
+   "kind": "heuristic",
+   "title": "Pasting into a credential field is blocked",
+   "description": "Blocking paste stops password managers and forces people to transcribe or remember credentials.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "3.3.8",
+     "title": "Accessible Authentication (Minimum)",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "#password",
+    "html": "<input id=\"password\" type=\"password\" onpaste=\"return false\" autocomplete=\"current-password\">",
+    "location": {
+     "start": 3146,
+     "end": 3238,
+     "line": 65,
+     "column": 7
+    },
+    "evidence": [
+     "The onpaste handler cancels paste on a password field."
+    ]
+   },
+   "recommendation": "Remove the paste handler so people can paste and use password managers.",
+   "fixConfidence": "high",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0pf0k6h",
+   "ruleId": "awb-role-button-div",
+   "source": "custom",
+   "category": "semantics",
+   "kind": "heuristic",
+   "title": "Custom button instead of a native button",
+   "description": "An element with role=\"button\" needs scripted keyboard handling that is often missing. A native button provides it for free.",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.1.1",
+     "title": "Keyboard",
+     "level": "A",
+     "inProfile": true
+    },
+    {
+     "id": "4.1.2",
+     "title": "Name, Role, Value",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > div:nth-of-type(1) > div",
+    "html": "<div role=\"button\" class=\"cta\">",
+    "location": {
+     "start": 2602,
+     "end": 2633,
+     "line": 50,
+     "column": 7
+    },
+    "evidence": [
+     "A div with role=\"button\" re-creates a native button by hand.",
+     "It has no tabindex, so keyboard users cannot reach it at all."
+    ]
+   },
+   "recommendation": "Replace the element with <button type=\"button\">.",
+   "fixConfidence": "review",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0cv8k6g",
+   "ruleId": "label-content-name-mismatch",
+   "source": "axe",
+   "category": "semantics",
+   "kind": "needs-review",
+   "title": "Elements must have their visible text as part of their accessible name",
+   "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+   "impact": "serious",
+   "criteria": [
+    {
+     "id": "2.5.3",
+     "title": "Label in Name",
+     "level": "A",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+   "node": {
+    "selector": ".close",
+    "html": "<button type=\"button\" class=\"close\" aria-label=\"Dismiss notice\">x</button>",
+    "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name",
+    "location": {
+     "start": 3555,
+     "end": 3619,
+     "line": 74,
+     "column": 7
+    },
+    "evidence": [
+     "Fix any of the following:",
+     "Unable to determine if the visible text is part of the accessible name"
+    ]
+   },
+   "recommendation": "Follow the rule guidance: Elements must have their visible text as part of their accessible name.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "0fhi6re",
+   "ruleId": "awb-dragging-alternative",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "needs-review",
+   "title": "Drag interaction needs a single-pointer alternative",
+   "description": "People who cannot hold and drag need another way to do the same thing.",
+   "impact": "moderate",
+   "criteria": [
+    {
+     "id": "2.5.7",
+     "title": "Dragging Movements",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > ul > li:nth-of-type(1)",
+    "html": "<li draggable=\"true\">",
+    "location": {
+     "start": 2825,
+     "end": 2846,
+     "line": 56,
+     "column": 7
+    },
+    "evidence": [
+     "This element can be dragged. WCAG 2.2 requires a single-pointer alternative unless dragging is essential."
+    ]
+   },
+   "recommendation": "Provide buttons, a menu or click-to-place as an alternative to dragging.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": []
+  },
+  {
+   "id": "1e6h4gt",
+   "ruleId": "awb-dragging-alternative",
+   "source": "custom",
+   "category": "keyboard",
+   "kind": "needs-review",
+   "title": "Drag interaction needs a single-pointer alternative",
+   "description": "People who cannot hold and drag need another way to do the same thing.",
+   "impact": "moderate",
+   "criteria": [
+    {
+     "id": "2.5.7",
+     "title": "Dragging Movements",
+     "level": "AA",
+     "inProfile": true
+    }
+   ],
+   "isBestPractice": false,
+   "node": {
+    "selector": "body > main > ul > li:nth-of-type(2)",
+    "html": "<li draggable=\"true\">",
+    "location": {
+     "start": 2868,
+     "end": 2889,
+     "line": 57,
+     "column": 7
+    },
+    "evidence": [
+     "This element can be dragged. WCAG 2.2 requires a single-pointer alternative unless dragging is essential."
+    ]
+   },
+   "recommendation": "Provide buttons, a menu or click-to-place as an alternative to dragging.",
+   "fixConfidence": "manual",
+   "verification": "unverified",
+   "manualReview": []
+  }
+ ],
+ "warnings": [],
+ "limitations": [
+  "Automated rules detect a subset of WCAG failures. A clean result does not mean the page conforms.",
+  "Only the tested page state was inspected: no menus were opened, forms submitted or content expanded.",
+  "Keyboard checks are heuristics from a scripted Tab walk; they cannot confirm that every task is operable.",
+  "Screen reader output, cognitive load and the meaning of text alternatives require a person.",
+  "Submitted source was rendered with page scripts and all network requests blocked."
+ ],
+ "document": {
+  "dialect": "html",
+  "fileName": "maple-ridge-booking.html",
+  "origin": "fixture",
+  "text": "<!DOCTYPE html>\n<!--\n  A11y Workbench test fixture: a fictional clinic booking page with\n  controlled accessibility defects. Every defect is listed in\n  fixtures/known-bad.defects.json and asserted by the test suite.\n  Maple Ridge Community Clinic is invented; no real organisation is depicted.\n-->\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <style>\n    body { font-family: Georgia, serif; margin: 0; color: #1f2933; background: #ffffff; }\n    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: #f4f6f8; }\n    .brand { font-weight: 700; font-size: 20px; }\n    main { max-width: 720px; margin: 0 auto; padding: 24px; }\n    .muted { color: #9a9a9a; }\n    .card { border: 1px solid #d9dee3; border-radius: 8px; padding: 16px; margin: 16px 0; }\n    .cta { display: inline-block; background: #0b5cad; color: #ffffff; padding: 10px 16px; border-radius: 6px; cursor: pointer; }\n    a:focus, button:focus { outline: none; }\n    .close { width: 16px; height: 16px; padding: 0; font-size: 10px; line-height: 16px; border: 0; background: #e4e7eb; }\n    .prefs li { padding: 6px; border: 1px dashed #b8c2cc; margin: 4px 0; list-style: none; }\n    label { display: block; margin-top: 12px; }\n    .size { width: 18px; height: 18px; padding: 0; margin: 0; font-size: 9px; border: 1px solid #52606d; background: #ffffff; }\n  </style>\n</head>\n<body>\n  <header>\n    <span class=\"brand\">Maple Ridge Community Clinic</span>\n    <nav aria-label=\"Main\">\n      <a href=\"/services\">Services</a>\n      <a href=\"/locations\">Locations</a>\n      <a href=\"/account\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"7\" r=\"4\" fill=\"#1f2933\"/><path d=\"M2 19c1-5 15-5 16 0\" fill=\"#1f2933\"/></svg></a>\n    </nav>\n  </header>\n\n  <main>\n    <h1>Book an appointment</h1>\n    <img src=\"/images/waiting-room.jpg\" width=\"640\" height=\"280\">\n    <p class=\"muted\">Walk-in hours are limited this week. Book online to reserve a time.</p>\n\n    <h3>Find a time</h3>\n    <div class=\"card\">\n      <span style=\"color: #7fb3d5; font-size: 14px;\">Same-day slots available</span>\n      <span>Health card number</span>\n      <input type=\"text\" autocomplete=\"emial\">\n      <label for=\"visit-date\">Preferred date</label>\n      <input id=\"visit-date\" type=\"date\">\n      <button type=\"button\" class=\"icon-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"5\" stroke=\"#1f2933\" fill=\"none\"/></svg></button>\n      <div role=\"button\" class=\"cta\">Book now</div>\n    </div>\n\n    <h2>Your preferences</h2>\n    <p id=\"prefs-help\" aria-labeledby=\"prefs-title\">Drag to reorder the clinicians you prefer to see.</p>\n    <ul class=\"prefs\">\n      <li draggable=\"true\">Dr. Okafor</li>\n      <li draggable=\"true\">Dr. Lindqvist</li>\n    </ul>\n\n    <h2>Patient portal sign-in</h2>\n    <form action=\"/signin\" method=\"post\">\n      <label for=\"email\">Email</label>\n      <input id=\"email\" type=\"email\" autocomplete=\"email\">\n      <label for=\"password\">Password</label>\n      <input id=\"password\" type=\"password\" onpaste=\"return false\" autocomplete=\"current-password\">\n      <button type=\"submit\" tabindex=\"3\">Sign in</button>\n    </form>\n\n    <div class=\"text-size\" role=\"group\" aria-label=\"Text size\">\n      <button type=\"button\" class=\"size\">A-</button><button type=\"button\" class=\"size\">A+</button>\n    </div>\n\n    <div class=\"card\" role=\"dialog\" aria-label=\"Clinic notice\">\n      <button type=\"button\" class=\"close\" aria-label=\"Dismiss notice\">x</button>\n      <p>Flu shots are available at all locations from October 1.</p>\n    </div>\n  </main>\n</body>\n</html>\n"
+ }
+}
