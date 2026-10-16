@@ -28,7 +28,7 @@ export function Overview() {
       <>
         <PageHeader
           title="Find it, fix it, prove it"
-          description="A11y Workbench audits pages, components and designs against WCAG 2.2 AA and AODA, proposes code fixes as diffs you approve, and reruns the checks to show what each fix actually resolved."
+          description="A11y audits pages, components and designs against WCAG 2.2 AA and AODA, proposes code fixes as diffs you approve, and reruns the checks to show what each fix actually resolved."
         />
         <h2 className="sr-only">Start an audit</h2>
         <ul className="grid gap-px overflow-hidden rounded-[var(--radius-panel)] border border-line bg-line md:grid-cols-3">

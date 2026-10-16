@@ -199,7 +199,7 @@ export interface NormalizedAxe {
   engineVersion: string;
 }
 
-/** Converts raw axe-core results into workbench findings, one per affected node. */
+/** Converts raw axe-core results into A11y findings, one per affected node. */
 export function normalizeAxe(results: AxeResults, opts: NormalizeOptions): NormalizedAxe {
   const findings: Finding[] = [];
   for (const rule of results.violations) for (const node of rule.nodes) findings.push(toFinding(rule, node, "violation", opts));

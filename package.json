@@ -45,5 +45,6 @@
   },
   "engines": {
     "node": ">=20.9"
-  }
+  },
+  "description": "A11y: accessibility auditing and remediation for WCAG 2.2 AA and AODA"
 }

@@ -246,7 +246,7 @@ const contrastFix: Fixer = (ctx) => {
 // ---- focus ---------------------------------------------------------------
 
 export const FOCUS_RULE = `
-/* Focus indicator proposed by A11y Workbench. Match the colour to your palette
+/* Focus indicator proposed by A11y. Match the colour to your palette
    and confirm it reaches 3:1 against every background it appears on. */
 :where(a[href], button, input, select, textarea, summary, [tabindex]):focus-visible {
   outline: 2px solid currentColor;

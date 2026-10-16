@@ -7,6 +7,7 @@ import { FileText, GitCompareArrows, ListChecks, Menu, PanelsTopLeft, ScanSearch
 import { useStore } from "./store";
 import { auditTarget } from "@/lib/report/report";
 import { PROFILES } from "@/lib/standards/profiles";
+import { PRODUCT_NAME } from "@/lib/version";
 
 const NAV = [
   { href: "/", label: "Overview", icon: PanelsTopLeft },
@@ -90,7 +91,7 @@ export function Shell({ children }: { children: ReactNode }) {
           <div className="flex h-14 items-center justify-between gap-2 px-4 lg:h-16">
             <Link href="/" className="flex items-center gap-2.5 rounded font-bold">
               <Mark />
-              <span>A11y Workbench</span>
+              <span>{PRODUCT_NAME}</span>
             </Link>
             <button
               type="button"

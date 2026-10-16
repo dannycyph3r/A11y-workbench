@@ -10,7 +10,7 @@ import { toHex, type RGBA } from "@/lib/contrast/color";
 import { normalizeCustom, sortFindings, type RawCustomResult } from "@/lib/findings/normalize";
 import type { Audit } from "@/lib/findings/types";
 import type { ProfileId } from "@/lib/standards/profiles";
-import { WORKBENCH_VERSION } from "@/lib/version";
+import { PRODUCT_NAME, WORKBENCH_VERSION } from "@/lib/version";
 
 const ColorSchema = z.object({ r: z.number(), g: z.number(), b: z.number(), a: z.number().optional() });
 const PaintSchema = z
@@ -138,7 +138,7 @@ export function analyzeFigma(json: unknown, profile: ProfileId, meta: { fileName
     input: { kind: "figma", fileName: meta.fileName || name, fileKey: meta.fileKey, nodeIds: meta.nodeIds, via: meta.via },
     profile,
     includeBestPractice: true,
-    engine: { name: "A11y Workbench design checks", version: WORKBENCH_VERSION, workbench: WORKBENCH_VERSION },
+    engine: { name: `${PRODUCT_NAME} design checks`, version: WORKBENCH_VERSION, workbench: WORKBENCH_VERSION },
     scope: {
       pageState: "Static design layers. Nothing was rendered or interacted with.",
       rulesRun: 3,

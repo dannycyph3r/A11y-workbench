@@ -8,6 +8,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Development only: extra hosts allowed to use the dev server's live reload,
+  // for example your machine's LAN address when testing from a phone.
+  // Set DEV_ORIGINS=192.168.2.14 (comma separated) in .env.local. Ignored by production builds.
+  allowedDevOrigins: (process.env.DEV_ORIGINS ?? "").split(",").map((s) => s.trim()).filter(Boolean),
   // Browser automation, the axe source file and the TypeScript compiler are
   // loaded at runtime on the server, never bundled.
   serverExternalPackages: ["playwright", "playwright-core", "axe-core", "typescript"],

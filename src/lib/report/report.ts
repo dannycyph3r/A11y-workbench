@@ -3,7 +3,7 @@ import { PROFILES } from "@/lib/standards/profiles";
 import { criteriaForProfile } from "@/lib/standards/profiles";
 import { proposeFix, type RemediationSettings } from "@/lib/remediation/engine";
 import type { RemediationState } from "@/lib/remediation/state";
-import { WORKBENCH_VERSION } from "@/lib/version";
+import { PRODUCT_NAME, WORKBENCH_VERSION } from "@/lib/version";
 
 export const NON_CERTIFICATION =
   "This report records the results of automated and heuristic checks on the stated scope. It is not a certification of conformance with WCAG, the AODA or any other standard or law, and passing these checks does not mean the content is accessible. A full evaluation needs manual testing with assistive technology and people with disabilities.";
@@ -108,7 +108,7 @@ export function buildReport(audit: Audit, rem: RemediationState | undefined, set
 
   return {
     generatedAt: new Date().toISOString(),
-    generator: `A11y Workbench ${WORKBENCH_VERSION}`,
+    generator: `${PRODUCT_NAME} ${WORKBENCH_VERSION}`,
     demo: audit.isDemo,
     target: auditTarget(audit),
     inputKind: audit.input.kind,
@@ -147,7 +147,7 @@ export function reportToCsv(report: Report): string {
     [f.id, f.rule, f.title, f.kind, f.impact, f.category, f.criteria, f.bestPractice ? "yes" : "no", f.selector, f.location, f.evidence, f.recommendation, f.fixConfidence, f.fixDecision, f.proposedFix, f.verification, f.verificationNote].map(csvCell).join(","),
   );
   const preamble = [
-    `# A11y Workbench report${report.demo ? " (DEMO DATA, not a live scan)" : ""}`,
+    `# ${PRODUCT_NAME} report${report.demo ? " (DEMO DATA, not a live scan)" : ""}`,
     `# Target: ${report.target}`,
     `# Standard: ${report.standard.profile}`,
     `# Engine: ${report.engine.name} ${report.engine.version}${report.engine.browser ? `, Chromium ${report.engine.browser}` : ""}`,

@@ -4,9 +4,11 @@ import "@fontsource-variable/atkinson-hyperlegible-mono";
 import "./globals.css";
 import { StoreProvider } from "@/components/store";
 import { Shell } from "@/components/shell";
+import { PRODUCT_NAME, PRODUCT_TAGLINE } from "@/lib/version";
 
 export const metadata: Metadata = {
-  title: { default: "A11y Workbench", template: "%s | A11y Workbench" },
+  title: { default: `${PRODUCT_NAME}: ${PRODUCT_TAGLINE}`, template: `%s | ${PRODUCT_NAME}` },
+  applicationName: PRODUCT_NAME,
   description: "Audit pages, components and designs against WCAG 2.2 AA and AODA, review fixes as diffs, and verify them with a rerun.",
 };
 

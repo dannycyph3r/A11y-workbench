@@ -51,7 +51,7 @@
  },
  "findings": [
   {
-   "id": "1pxcqg2",
+   "id": "1pdgok3",
    "ruleId": "aria-valid-attr",
    "source": "axe",
    "category": "aria",
@@ -74,8 +74,8 @@
     "html": "<p id=\"prefs-help\" aria-labeledby=\"prefs-title\">Drag to reorder the clinicians you prefer to see.</p>",
     "failureSummary": "Fix any of the following:\n  Invalid ARIA attribute name: aria-labeledby",
     "location": {
-     "start": 2694,
-     "end": 2742,
+     "start": 2684,
+     "end": 2732,
      "line": 54,
      "column": 5
     },
@@ -90,7 +90,7 @@
    "manualReview": []
   },
   {
-   "id": "0umd813",
+   "id": "1nhb1o6",
    "ruleId": "button-name",
    "source": "axe",
    "category": "aria",
@@ -113,8 +113,8 @@
     "html": "<button type=\"button\" class=\"icon-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"5\" stroke=\"#1f2933\" fill=\"none\"></circle></svg></button>",
     "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
     "location": {
-     "start": 2413,
-     "end": 2455,
+     "start": 2403,
+     "end": 2445,
      "line": 49,
      "column": 7
     },
@@ -137,7 +137,7 @@
    ]
   },
   {
-   "id": "04dcb41",
+   "id": "02pbjg8",
    "ruleId": "image-alt",
    "source": "axe",
    "category": "images",
@@ -160,8 +160,8 @@
     "html": "<img src=\"/images/waiting-room.jpg\" width=\"640\" height=\"280\">",
     "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
     "location": {
-     "start": 1938,
-     "end": 1999,
+     "start": 1928,
+     "end": 1989,
      "line": 39,
      "column": 5
     },
@@ -182,7 +182,7 @@
    ]
   },
   {
-   "id": "1vi6ihf",
+   "id": "0x3p5km",
    "ruleId": "label",
    "source": "axe",
    "category": "forms",
@@ -205,8 +205,8 @@
     "html": "<input type=\"text\" autocomplete=\"emial\">",
     "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
     "location": {
-     "start": 2271,
-     "end": 2311,
+     "start": 2261,
+     "end": 2301,
      "line": 46,
      "column": 7
     },
@@ -227,7 +227,7 @@
    "manualReview": []
   },
   {
-   "id": "1jya1sy",
+   "id": "1iu8hj3",
    "ruleId": "autocomplete-valid",
    "source": "axe",
    "category": "forms",
@@ -250,8 +250,8 @@
     "html": "<input type=\"text\" autocomplete=\"emial\">",
     "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted",
     "location": {
-     "start": 2271,
-     "end": 2311,
+     "start": 2261,
+     "end": 2301,
      "line": 46,
      "column": 7
     },
@@ -266,7 +266,7 @@
    "manualReview": []
   },
   {
-   "id": "1k0wg5x",
+   "id": "0skyelc",
    "ruleId": "color-contrast",
    "source": "axe",
    "category": "contrast",
@@ -289,8 +289,8 @@
     "html": "<p class=\"muted\">Walk-in hours are limited this week. Book online to reserve a time.</p>",
     "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.81 (foreground color: #9a9a9a, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
     "location": {
-     "start": 2004,
-     "end": 2021,
+     "start": 1994,
+     "end": 2011,
      "line": 40,
      "column": 5
     },
@@ -322,7 +322,7 @@
    ]
   },
   {
-   "id": "0sqsxtu",
+   "id": "1stmqi5",
    "ruleId": "color-contrast",
    "source": "axe",
    "category": "contrast",
@@ -345,8 +345,8 @@
     "html": "<span style=\"color: #7fb3d5; font-size: 14px;\">Same-day slots available</span>",
     "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.25 (foreground color: #7fb3d5, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
     "location": {
-     "start": 2148,
-     "end": 2195,
+     "start": 2138,
+     "end": 2185,
      "line": 44,
      "column": 7
     },
@@ -377,7 +377,7 @@
    ]
   },
   {
-   "id": "0eqjb2j",
+   "id": "0fukvce",
    "ruleId": "document-title",
    "source": "axe",
    "category": "structure",
@@ -400,8 +400,8 @@
     "html": "<html>",
     "failureSummary": "Fix any of the following:\n  Document does not have a non-empty <title> element",
     "location": {
-     "start": 299,
-     "end": 305,
+     "start": 289,
+     "end": 295,
      "line": 8,
      "column": 1
     },
@@ -416,7 +416,7 @@
    "manualReview": []
   },
   {
-   "id": "01g79cw",
+   "id": "04rzc6l",
    "ruleId": "html-has-lang",
    "source": "axe",
    "category": "language",
@@ -439,8 +439,8 @@
     "html": "<html>",
     "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
     "location": {
-     "start": 299,
-     "end": 305,
+     "start": 289,
+     "end": 295,
      "line": 8,
      "column": 1
     },
@@ -457,7 +457,7 @@
    ]
   },
   {
-   "id": "0xvkurq",
+   "id": "03d48kh",
    "ruleId": "link-name",
    "source": "axe",
    "category": "aria",
@@ -486,8 +486,8 @@
     "html": "<a href=\"/account\">",
     "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
     "location": {
-     "start": 1680,
-     "end": 1699,
+     "start": 1670,
+     "end": 1689,
      "line": 33,
      "column": 7
     },
@@ -507,7 +507,7 @@
    "manualReview": []
   },
   {
-   "id": "0bezgau",
+   "id": "1fd2k35",
    "ruleId": "tabindex",
    "source": "axe",
    "category": "keyboard",
@@ -523,8 +523,8 @@
     "html": "<button type=\"submit\" tabindex=\"3\">Sign in</button>",
     "failureSummary": "Fix any of the following:\n  Element has a tabindex greater than 0",
     "location": {
-     "start": 3245,
-     "end": 3280,
+     "start": 3235,
+     "end": 3270,
      "line": 66,
      "column": 7
     },
@@ -539,7 +539,7 @@
    "manualReview": []
   },
   {
-   "id": "0vwbfmg",
+   "id": "0u8anyn",
    "ruleId": "target-size",
    "source": "axe",
    "category": "target-size",
@@ -562,8 +562,8 @@
     "html": "<button type=\"button\" class=\"size\">A-</button>",
     "failureSummary": "Fix any of the following:\n  Target has insufficient size (18px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px.",
     "location": {
-     "start": 3380,
-     "end": 3415,
+     "start": 3370,
+     "end": 3405,
      "line": 70,
      "column": 7
     },
@@ -579,7 +579,7 @@
    "manualReview": []
   },
   {
-   "id": "0s2zbmx",
+   "id": "1vh381a",
    "ruleId": "target-size",
    "source": "axe",
    "category": "target-size",
@@ -602,8 +602,8 @@
     "html": "<button type=\"button\" class=\"size\">A+</button>",
     "failureSummary": "Fix any of the following:\n  Target has insufficient size (18px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12px instead of at least 24px.",
     "location": {
-     "start": 3426,
-     "end": 3461,
+     "start": 3416,
+     "end": 3451,
      "line": 70,
      "column": 53
     },
@@ -619,7 +619,7 @@
    "manualReview": []
   },
   {
-   "id": "1joj3wr",
+   "id": "0mxquk2",
    "ruleId": "heading-order",
    "source": "axe",
    "category": "structure",
@@ -635,8 +635,8 @@
     "html": "<h3>Find a time</h3>",
     "failureSummary": "Fix any of the following:\n  Heading order invalid",
     "location": {
-     "start": 2098,
-     "end": 2102,
+     "start": 2088,
+     "end": 2092,
      "line": 42,
      "column": 5
     },
@@ -651,7 +651,7 @@
    "manualReview": []
   },
   {
-   "id": "0tbinao",
+   "id": "0w42ybz",
    "ruleId": "meta-viewport",
    "source": "axe",
    "category": "structure",
@@ -674,8 +674,8 @@
     "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
     "failureSummary": "Fix any of the following:\n  user-scalable=no on <meta> tag disables zooming on mobile devices",
     "location": {
-     "start": 340,
-     "end": 443,
+     "start": 330,
+     "end": 433,
      "line": 11,
      "column": 3
     },
@@ -690,7 +690,7 @@
    "manualReview": []
   },
   {
-   "id": "1j9vq7y",
+   "id": "0mwfnwi",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -711,8 +711,8 @@
     "selector": "body > header > nav > a:nth-of-type(1)",
     "html": "<a href=\"/services\">",
     "location": {
-     "start": 1600,
-     "end": 1620,
+     "start": 1590,
+     "end": 1610,
      "line": 31,
      "column": 7
     },
@@ -729,7 +729,7 @@
    ]
   },
   {
-   "id": "1jjs6ey",
+   "id": "1ifqm53",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -750,8 +750,8 @@
     "selector": "body > header > nav > a:nth-of-type(2)",
     "html": "<a href=\"/locations\">",
     "location": {
-     "start": 1639,
-     "end": 1660,
+     "start": 1629,
+     "end": 1650,
      "line": 32,
      "column": 7
     },
@@ -768,7 +768,7 @@
    ]
   },
   {
-   "id": "1etaniu",
+   "id": "0kau1bl",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -789,8 +789,8 @@
     "selector": "body > header > nav > a:nth-of-type(3)",
     "html": "<a href=\"/account\">",
     "location": {
-     "start": 1680,
-     "end": 1699,
+     "start": 1670,
+     "end": 1689,
      "line": 33,
      "column": 7
     },
@@ -807,7 +807,7 @@
    ]
   },
   {
-   "id": "14xq2jj",
+   "id": "07n74em",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -828,8 +828,8 @@
     "selector": "body > main > div:nth-of-type(1) > button",
     "html": "<button type=\"button\" class=\"icon-search\">",
     "location": {
-     "start": 2413,
-     "end": 2455,
+     "start": 2403,
+     "end": 2445,
      "line": 49,
      "column": 7
     },
@@ -846,7 +846,7 @@
    ]
   },
   {
-   "id": "1obw7aj",
+   "id": "1obt1sk",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -867,8 +867,8 @@
     "selector": "body > main > form > button",
     "html": "<button type=\"submit\" tabindex=\"3\">",
     "location": {
-     "start": 3245,
-     "end": 3280,
+     "start": 3235,
+     "end": 3270,
      "line": 66,
      "column": 7
     },
@@ -885,7 +885,7 @@
    ]
   },
   {
-   "id": "0e636er",
+   "id": "0k965kk",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -906,8 +906,8 @@
     "selector": "body > main > div:nth-of-type(2) > button:nth-of-type(1)",
     "html": "<button type=\"button\" class=\"size\">",
     "location": {
-     "start": 3380,
-     "end": 3415,
+     "start": 3370,
+     "end": 3405,
      "line": 70,
      "column": 7
     },
@@ -924,7 +924,7 @@
    ]
   },
   {
-   "id": "0ofy7s2",
+   "id": "1sylnjx",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -945,8 +945,8 @@
     "selector": "body > main > div:nth-of-type(2) > button:nth-of-type(2)",
     "html": "<button type=\"button\" class=\"size\">",
     "location": {
-     "start": 3426,
-     "end": 3461,
+     "start": 3416,
+     "end": 3451,
      "line": 70,
      "column": 53
     },
@@ -963,7 +963,7 @@
    ]
   },
   {
-   "id": "0irsogv",
+   "id": "1jefdj6",
    "ruleId": "awb-focus-not-visible",
    "source": "custom",
    "category": "keyboard",
@@ -984,8 +984,8 @@
     "selector": "body > main > div:nth-of-type(3) > button",
     "html": "<button type=\"button\" class=\"close\" aria-label=\"Dismiss notice\">",
     "location": {
-     "start": 3555,
-     "end": 3619,
+     "start": 3545,
+     "end": 3609,
      "line": 74,
      "column": 7
     },
@@ -1033,7 +1033,7 @@
    "manualReview": []
   },
   {
-   "id": "0aefo7o",
+   "id": "1agi1af",
    "ruleId": "awb-paste-blocked",
    "source": "custom",
    "category": "forms",
@@ -1054,8 +1054,8 @@
     "selector": "#password",
     "html": "<input id=\"password\" type=\"password\" onpaste=\"return false\" autocomplete=\"current-password\">",
     "location": {
-     "start": 3146,
-     "end": 3238,
+     "start": 3136,
+     "end": 3228,
      "line": 65,
      "column": 7
     },
@@ -1069,7 +1069,7 @@
    "manualReview": []
   },
   {
-   "id": "0pf0k6h",
+   "id": "1lqxrat",
    "ruleId": "awb-role-button-div",
    "source": "custom",
    "category": "semantics",
@@ -1096,8 +1096,8 @@
     "selector": "body > main > div:nth-of-type(1) > div",
     "html": "<div role=\"button\" class=\"cta\">",
     "location": {
-     "start": 2602,
-     "end": 2633,
+     "start": 2592,
+     "end": 2623,
      "line": 50,
      "column": 7
     },
@@ -1112,7 +1112,7 @@
    "manualReview": []
   },
   {
-   "id": "0cv8k6g",
+   "id": "1dhmqn1",
    "ruleId": "label-content-name-mismatch",
    "source": "axe",
    "category": "semantics",
@@ -1135,8 +1135,8 @@
     "html": "<button type=\"button\" class=\"close\" aria-label=\"Dismiss notice\">x</button>",
     "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name",
     "location": {
-     "start": 3555,
-     "end": 3619,
+     "start": 3545,
+     "end": 3609,
      "line": 74,
      "column": 7
     },
@@ -1151,7 +1151,7 @@
    "manualReview": []
   },
   {
-   "id": "0fhi6re",
+   "id": "0fhlc9d",
    "ruleId": "awb-dragging-alternative",
    "source": "custom",
    "category": "keyboard",
@@ -1172,8 +1172,8 @@
     "selector": "body > main > ul > li:nth-of-type(1)",
     "html": "<li draggable=\"true\">",
     "location": {
-     "start": 2825,
-     "end": 2846,
+     "start": 2815,
+     "end": 2836,
      "line": 56,
      "column": 7
     },
@@ -1187,7 +1187,7 @@
    "manualReview": []
   },
   {
-   "id": "1e6h4gt",
+   "id": "0bw5bue",
    "ruleId": "awb-dragging-alternative",
    "source": "custom",
    "category": "keyboard",
@@ -1208,8 +1208,8 @@
     "selector": "body > main > ul > li:nth-of-type(2)",
     "html": "<li draggable=\"true\">",
     "location": {
-     "start": 2868,
-     "end": 2889,
+     "start": 2858,
+     "end": 2879,
      "line": 57,
      "column": 7
     },
@@ -1235,6 +1235,6 @@
   "dialect": "html",
   "fileName": "maple-ridge-booking.html",
   "origin": "fixture",
-  "text": "<!DOCTYPE html>\n<!--\n  A11y Workbench test fixture: a fictional clinic booking page with\n  controlled accessibility defects. Every defect is listed in\n  fixtures/known-bad.defects.json and asserted by the test suite.\n  Maple Ridge Community Clinic is invented; no real organisation is depicted.\n-->\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <style>\n    body { font-family: Georgia, serif; margin: 0; color: #1f2933; background: #ffffff; }\n    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: #f4f6f8; }\n    .brand { font-weight: 700; font-size: 20px; }\n    main { max-width: 720px; margin: 0 auto; padding: 24px; }\n    .muted { color: #9a9a9a; }\n    .card { border: 1px solid #d9dee3; border-radius: 8px; padding: 16px; margin: 16px 0; }\n    .cta { display: inline-block; background: #0b5cad; color: #ffffff; padding: 10px 16px; border-radius: 6px; cursor: pointer; }\n    a:focus, button:focus { outline: none; }\n    .close { width: 16px; height: 16px; padding: 0; font-size: 10px; line-height: 16px; border: 0; background: #e4e7eb; }\n    .prefs li { padding: 6px; border: 1px dashed #b8c2cc; margin: 4px 0; list-style: none; }\n    label { display: block; margin-top: 12px; }\n    .size { width: 18px; height: 18px; padding: 0; margin: 0; font-size: 9px; border: 1px solid #52606d; background: #ffffff; }\n  </style>\n</head>\n<body>\n  <header>\n    <span class=\"brand\">Maple Ridge Community Clinic</span>\n    <nav aria-label=\"Main\">\n      <a href=\"/services\">Services</a>\n      <a href=\"/locations\">Locations</a>\n      <a href=\"/account\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"7\" r=\"4\" fill=\"#1f2933\"/><path d=\"M2 19c1-5 15-5 16 0\" fill=\"#1f2933\"/></svg></a>\n    </nav>\n  </header>\n\n  <main>\n    <h1>Book an appointment</h1>\n    <img src=\"/images/waiting-room.jpg\" width=\"640\" height=\"280\">\n    <p class=\"muted\">Walk-in hours are limited this week. Book online to reserve a time.</p>\n\n    <h3>Find a time</h3>\n    <div class=\"card\">\n      <span style=\"color: #7fb3d5; font-size: 14px;\">Same-day slots available</span>\n      <span>Health card number</span>\n      <input type=\"text\" autocomplete=\"emial\">\n      <label for=\"visit-date\">Preferred date</label>\n      <input id=\"visit-date\" type=\"date\">\n      <button type=\"button\" class=\"icon-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"5\" stroke=\"#1f2933\" fill=\"none\"/></svg></button>\n      <div role=\"button\" class=\"cta\">Book now</div>\n    </div>\n\n    <h2>Your preferences</h2>\n    <p id=\"prefs-help\" aria-labeledby=\"prefs-title\">Drag to reorder the clinicians you prefer to see.</p>\n    <ul class=\"prefs\">\n      <li draggable=\"true\">Dr. Okafor</li>\n      <li draggable=\"true\">Dr. Lindqvist</li>\n    </ul>\n\n    <h2>Patient portal sign-in</h2>\n    <form action=\"/signin\" method=\"post\">\n      <label for=\"email\">Email</label>\n      <input id=\"email\" type=\"email\" autocomplete=\"email\">\n      <label for=\"password\">Password</label>\n      <input id=\"password\" type=\"password\" onpaste=\"return false\" autocomplete=\"current-password\">\n      <button type=\"submit\" tabindex=\"3\">Sign in</button>\n    </form>\n\n    <div class=\"text-size\" role=\"group\" aria-label=\"Text size\">\n      <button type=\"button\" class=\"size\">A-</button><button type=\"button\" class=\"size\">A+</button>\n    </div>\n\n    <div class=\"card\" role=\"dialog\" aria-label=\"Clinic notice\">\n      <button type=\"button\" class=\"close\" aria-label=\"Dismiss notice\">x</button>\n      <p>Flu shots are available at all locations from October 1.</p>\n    </div>\n  </main>\n</body>\n</html>\n"
+  "text": "<!DOCTYPE html>\n<!--\n  A11y test fixture: a fictional clinic booking page with\n  controlled accessibility defects. Every defect is listed in\n  fixtures/known-bad.defects.json and asserted by the test suite.\n  Maple Ridge Community Clinic is invented; no real organisation is depicted.\n-->\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <style>\n    body { font-family: Georgia, serif; margin: 0; color: #1f2933; background: #ffffff; }\n    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: #f4f6f8; }\n    .brand { font-weight: 700; font-size: 20px; }\n    main { max-width: 720px; margin: 0 auto; padding: 24px; }\n    .muted { color: #9a9a9a; }\n    .card { border: 1px solid #d9dee3; border-radius: 8px; padding: 16px; margin: 16px 0; }\n    .cta { display: inline-block; background: #0b5cad; color: #ffffff; padding: 10px 16px; border-radius: 6px; cursor: pointer; }\n    a:focus, button:focus { outline: none; }\n    .close { width: 16px; height: 16px; padding: 0; font-size: 10px; line-height: 16px; border: 0; background: #e4e7eb; }\n    .prefs li { padding: 6px; border: 1px dashed #b8c2cc; margin: 4px 0; list-style: none; }\n    label { display: block; margin-top: 12px; }\n    .size { width: 18px; height: 18px; padding: 0; margin: 0; font-size: 9px; border: 1px solid #52606d; background: #ffffff; }\n  </style>\n</head>\n<body>\n  <header>\n    <span class=\"brand\">Maple Ridge Community Clinic</span>\n    <nav aria-label=\"Main\">\n      <a href=\"/services\">Services</a>\n      <a href=\"/locations\">Locations</a>\n      <a href=\"/account\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"7\" r=\"4\" fill=\"#1f2933\"/><path d=\"M2 19c1-5 15-5 16 0\" fill=\"#1f2933\"/></svg></a>\n    </nav>\n  </header>\n\n  <main>\n    <h1>Book an appointment</h1>\n    <img src=\"/images/waiting-room.jpg\" width=\"640\" height=\"280\">\n    <p class=\"muted\">Walk-in hours are limited this week. Book online to reserve a time.</p>\n\n    <h3>Find a time</h3>\n    <div class=\"card\">\n      <span style=\"color: #7fb3d5; font-size: 14px;\">Same-day slots available</span>\n      <span>Health card number</span>\n      <input type=\"text\" autocomplete=\"emial\">\n      <label for=\"visit-date\">Preferred date</label>\n      <input id=\"visit-date\" type=\"date\">\n      <button type=\"button\" class=\"icon-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"5\" stroke=\"#1f2933\" fill=\"none\"/></svg></button>\n      <div role=\"button\" class=\"cta\">Book now</div>\n    </div>\n\n    <h2>Your preferences</h2>\n    <p id=\"prefs-help\" aria-labeledby=\"prefs-title\">Drag to reorder the clinicians you prefer to see.</p>\n    <ul class=\"prefs\">\n      <li draggable=\"true\">Dr. Okafor</li>\n      <li draggable=\"true\">Dr. Lindqvist</li>\n    </ul>\n\n    <h2>Patient portal sign-in</h2>\n    <form action=\"/signin\" method=\"post\">\n      <label for=\"email\">Email</label>\n      <input id=\"email\" type=\"email\" autocomplete=\"email\">\n      <label for=\"password\">Password</label>\n      <input id=\"password\" type=\"password\" onpaste=\"return false\" autocomplete=\"current-password\">\n      <button type=\"submit\" tabindex=\"3\">Sign in</button>\n    </form>\n\n    <div class=\"text-size\" role=\"group\" aria-label=\"Text size\">\n      <button type=\"button\" class=\"size\">A-</button><button type=\"button\" class=\"size\">A+</button>\n    </div>\n\n    <div class=\"card\" role=\"dialog\" aria-label=\"Clinic notice\">\n      <button type=\"button\" class=\"close\" aria-label=\"Dismiss notice\">x</button>\n      <p>Flu shots are available at all locations from October 1.</p>\n    </div>\n  </main>\n</body>\n</html>\n"
  }
 }

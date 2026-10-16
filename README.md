@@ -1,4 +1,6 @@
-# A11y Workbench
+# A11y
+
+Accessibility auditing and remediation.
 
 Audit a web page, component source or a Figma design against WCAG 2.2 AA, WCAG 2.1 AA, WCAG 2.0 AA or an AODA profile. Review each finding with its evidence, accept or reject proposed code fixes as real diffs, then rerun the checks to see which fixes actually resolved what.
 
@@ -29,6 +31,7 @@ No environment variables are required. Copy `.env.example` to `.env.local` to co
 | `FIGMA_ACCESS_TOKEN` | Enables Figma import by link. Read on the server only; never sent to the browser. |
 | `AI_PROVIDER=anthropic`, `ANTHROPIC_API_KEY`, `AI_MODEL` | Optional plain-language explanations for findings that need a person. Off by default. |
 | `SCAN_DEV_ALLOWLIST` | Development only. Comma-separated `host:port` pairs the URL scanner may reach even though they are private. Ignored when `NODE_ENV=production`. |
+| `DEV_ORIGINS` | Development only. Hosts allowed to use live reload when you open the dev server by network address (for example `192.168.2.14` to test from a phone). Not needed for `localhost`. |
 | `SCAN_UPSTREAM_PROXY` | Chain scanner traffic through a corporate HTTP proxy. See the security notes for the trade-off. |
 
 ## Scripts
@@ -74,7 +77,7 @@ Fixes are deterministic text edits on the audited document, never on a live site
 
 - *High-confidence suggestion*: deterministic and well supported (for example removing `user-scalable=no`).
 - *Review recommended*: context-dependent or may change the design (contrast colours, native element swaps, ARIA corrections).
-- *Manual assessment required*: the workbench cannot know the right content. Alt text, accessible names, labels and page titles are never invented; the workspace asks the person to write them and only then produces the edit.
+- *Manual assessment required*: A11y cannot know the right content. Alt text, accessible names, labels and page titles are never invented; the workspace asks the person to write them and only then produces the edit.
 
 Accepted fixes are composed into one patch. Overlapping fixes are reported as conflicts, not silently dropped. **Verify** rescans the original and the patched document under identical sandbox conditions and reports, per finding, *resolved on rerun*, *still failing* or *needs manual check*, plus any findings the patch introduced. Accepting a fix never marks it resolved on its own.
 
@@ -116,7 +119,7 @@ More detail in [docs/architecture.md](docs/architecture.md).
 - **Errors.** API errors return a code and a plain message; stack traces stay in the server log.
 - **Privacy.** The server holds content only for the length of a request. Audits live in the browser's session storage and disappear when the tab closes. Settings (no content) live in local storage.
 
-Known residual risks: with `SCAN_UPSTREAM_PROXY` set, the upstream proxy resolves names again after the workbench has checked them, which reopens a narrow rebinding window. Rate limiting trusts `x-forwarded-for`, so deploy behind a proxy that sets it.
+Known residual risks: with `SCAN_UPSTREAM_PROXY` set, the upstream proxy resolves names again after A11y has checked them, which reopens a narrow rebinding window. Rate limiting trusts `x-forwarded-for`, so deploy behind a proxy that sets it.
 
 ## Limitations
 

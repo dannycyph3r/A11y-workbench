@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
-  A11y Workbench tokens. Every text and control pair below is measured in
+  A11y design tokens. Every text and control pair below is measured in
   tests/unit/tokens.test.ts against WCAG thresholds in both themes.
 */
 :root {

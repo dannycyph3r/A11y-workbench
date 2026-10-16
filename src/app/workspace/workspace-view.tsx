@@ -353,7 +353,7 @@ function FixPanel(props: {
           {fix.inputs.length ? (
             <fieldset className="rounded-[var(--radius-control)] border border-line bg-surface-2 p-4">
               <legend className="px-1 text-sm font-semibold">Your input</legend>
-              <p className="mb-3 text-xs text-ink-3">The workbench never writes this text for you. It needs someone who knows the content.</p>
+              <p className="mb-3 text-xs text-ink-3">A11y never writes this text for you. It needs someone who knows the content.</p>
               <div className="flex flex-col gap-3">
                 {fix.inputs.map((inp) =>
                   inp.type === "checkbox" ? (
